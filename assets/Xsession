@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+xset -s 0 &
+xset dpms &
+until /usr/bin/python3 /home/pi/LinedrawingTimelapse/LinedrawingTimelapse.py 2> /home/pi/linedrawingtimelapse.err; do
+        echo "LinedrawingTimelapse crashed with exit code $?. Respawning..." >&2
+        sleep 1
+done
