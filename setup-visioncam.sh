@@ -23,4 +23,7 @@ chmod +x .xsession &&
 echo -e "${BLUE}Changing PiTFT scaling...${NC}" &&
 sudo sed -i 's/hdmi_cvt.*/hdmi_cvt=320 240 60 1 0 0 0/' /boot/config.txt &&
 
+echo -e "${BLUE}Disabling screen blanking...${NC}" &&
+sudo sed -i 's/xserver-command.*/xserver-command=X -s 0 -dpms/' /etc/lightdm/lightdm.conf &&
+
 echo -e "${GREEN}Done! Please restart manually to confirm installation.${NC}" 
