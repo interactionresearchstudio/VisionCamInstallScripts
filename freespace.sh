@@ -27,4 +27,10 @@ sudo apt-get autoremove -y &&
 echo -e "${BLUE}Running clean...${NC}" &&
 sudo apt-get clean &&
 
+echo -e "${BLUE}Removing opencv compilation files...${NC}" &&
+rm -rf opencv-3.3.0 &&
+rm -rf opencv_contrib-3.3.0 &&
+rm -rf opencv.zip &&
+rm -rf opencv_contrib.zip &&
+
 echo -e "${GREEN}Done!${NC}"
