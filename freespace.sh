@@ -22,7 +22,7 @@ echo -e "${BLUE}Removing scratch...${NC}" &&
 sudo apt-get purge -y scratch &&
 
 echo -e "${BLUE}Running autoremove...${NC}" &&
-sudo apt-get autoremove &&
+sudo apt-get autoremove -y &&
 
 echo -e "${BLUE}Running clean...${NC}" &&
 sudo apt-get clean &&
